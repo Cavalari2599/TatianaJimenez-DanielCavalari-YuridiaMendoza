@@ -13,9 +13,7 @@ class Categoria extends Model
 
     protected $fillable = ['nombre'];
 
-    /**
-     * Categoria 1 -> 0..* Material (rol -categoria).
-     */
+   
     public function materiales(): HasMany
     {
         return $this->hasMany(Material::class, 'categoria_fk', 'idCategoria');
